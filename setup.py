@@ -19,7 +19,7 @@ def read(*names, **kwargs):
 
 setup(
     name='cidr-list',
-    version='0.1.1',
+    version='0.1.2',
     url='https://github.com/mpicard/python-cidr-list',
     license='MIT',
     author='Martin Picard',
