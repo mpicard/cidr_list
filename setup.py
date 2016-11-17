@@ -1,7 +1,20 @@
-"""
-Convert CIDR to list of IPs
-"""
+#!/usr/bin/env python
+# -*- encoding: utf-8 -*-
+from __future__ import absolute_import
+from __future__ import print_function
+
+import io
+from os.path import join
+from os.path import dirname
+
 from setuptools import find_packages, setup
+
+
+def read(*names, **kwargs):
+    return io.open(
+        join(dirname(__file__), *names),
+        encoding=kwargs.get('encoding', 'utf8')
+    ).read()
 
 
 setup(
@@ -12,7 +25,7 @@ setup(
     author='Martin Picard',
     author_email='map@cix.ie',
     description='Convert CIDR to list of IPs',
-    long_description=__doc__,
+    long_description=read('README.md'),
     packages=find_packages(exclude=['tests']),
     include_package_data=True,
     zip_safe=False,

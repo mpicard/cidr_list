@@ -7,3 +7,6 @@ include README.md
 include tox.ini .travis.yml
 
 global-exclude *.py[cod] __pycache__ *.so *.dylib
+
+# added by check_manifest.py
+include LICENSE
