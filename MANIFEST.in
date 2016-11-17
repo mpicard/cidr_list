@@ -1,0 +1,9 @@
+graft cidr_list
+graft tests
+
+include .coveragerc
+include README.md
+
+include tox.ini
+
+global-exclude *.py[cod] __pycache__ *.so *.dylib
