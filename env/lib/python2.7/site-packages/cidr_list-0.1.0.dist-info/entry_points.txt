@@ -1,0 +1,3 @@
+[console_scripts]
+cidr-list = cidr_list.cli:main
+
