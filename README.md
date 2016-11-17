@@ -1,6 +1,7 @@
 # cidr-list
 
 [![Build Status](https://travis-ci.org/mpicard/cidr_list.svg?branch=master)](https://travis-ci.org/mpicard/cidr_list)
+[![Coverage Status](https://coveralls.io/repos/github/mpicard/cidr_list/badge.svg?branch=master)](https://coveralls.io/github/mpicard/cidr_list?branch=master)
 
 Convert CIDR to list of IPs.
 
