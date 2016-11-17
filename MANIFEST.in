@@ -4,6 +4,6 @@ graft tests
 include .coveragerc
 include README.md
 
-include tox.ini
+include tox.ini .travis.yml
 
 global-exclude *.py[cod] __pycache__ *.so *.dylib
