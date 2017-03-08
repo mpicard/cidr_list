@@ -6,19 +6,15 @@ env:
     - LD_PRELOAD=/lib/x86_64-linux-gnu/libSegFault.so
     - SEGFAULT_SIGNALS=all
   matrix:
+    - TOXENV=clean
     - TOXENV=check
-    - TOXENV=py27
     - TOXENV=flake8
+    - TOXENV=py27
+    - TOXENV=report
 before_install:
   - python --version
-  - uname -a
-  - lsb_release -a
 install:
-  - pip install tox
-  - virtualenv --version
-  - easy_install --version
-  - pip --version
-  - tox --version
+  - pip install tox coveralls
 script:
   - tox -v
 after_failure:
@@ -31,5 +27,5 @@ cache:
     - $HOME/.cache/pip
 notifications:
   email:
-    on_success: never
+    on_success: always
     on_failure: always
