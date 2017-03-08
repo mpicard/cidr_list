@@ -1,22 +1,17 @@
 language: python
-python: '3.5'
-sudo: false
+python: "3.5"
 env:
   global:
     - LD_PRELOAD=/lib/x86_64-linux-gnu/libSegFault.so
     - SEGFAULT_SIGNALS=all
-  matrix:
-    - TOXENV=clean
-    - TOXENV=check
-    - TOXENV=flake8
-    - TOXENV=py27
-    - TOXENV=report
 before_install:
   - python --version
 install:
-  - pip install tox coveralls
+  - pip install tox-travis coveralls
 script:
   - tox -v
+after_success:
+  - coveralls
 after_failure:
   - more .tox/log/* | cat
   - more .tox/*/log/* | cat
